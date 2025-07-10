@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+header{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    padding: 0 8px;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+}
+header img{
+    height: 50px;
+}
+header button{
+    margin-top: 10px;
+    border: none;
+    color: white;
+    background-color: transparent;
+    font-size: 1.5rem;
+}
+header button:hover{
+    text-decoration: underline;
+}
+section{
+    margin-top: 50px;
+}
+.principal{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0px auto;
+    flex-wrap: wrap;
+}
+.principal img{
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.textos{
+    font-weight: bold;
+}
+.textos  h3, p, img{
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+.textos p{
+    line-height: 2.5rem;
+}
+section h2{
+    text-align: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto ;
+    gap: 2em;
+    flex-wrap: wrap;
+    flex: 1;
+    max-width: 1200px;
+}
+button, .card1, .card2, .card3{
+    transition: all 0.3s ease-in-out;
+}
+.container h3,p{
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.container h3{
+    font-size: 2em;
+}
+.container p{
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: rgba(255, 255, 255, 0.699);
+}
+.container img{
+    height: 85px;
+    margin-bottom: 20px;
+}
+.card-1,.card-2,.card-3{
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.932);
+    width: 350px;
+    min-height: 200px;
+}
+.card-1:hover, .card-2:hover, .card-3:hover{
+    transition: 1s;
+    border: 2px solid white;
+}
+footer{
+    margin-top: 50px;
+    text-align: center;
+}
+.textos img{
+    height: 50px;
+    width: 50px;
+}
+
+.meusprojetos{
+    display: flex;
+    justify-content: center;
+    margin: 20px auto ;
+    overflow-x: auto;
+    gap:32px;
+    flex-wrap: wrap;
+    flex: 1;
+    max-width: 1200px;
+}
+.meusprojetos img{
+ width: 500px;
+ height: 350px;
+}
