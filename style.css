@@ -10,44 +10,49 @@ body{
     color: white;
 }
 header{
+    margin: 20px;
     background-color: rgb(0, 0, 0);
-    color: white;
     display: flex;
-    padding: 0 8px;
     height: 90px;
+    margin-bottom: 100px;
     justify-content: space-between;
     align-items: center;
 }
 header img{
-    height: 50px;
+    height: 60px;
+    margin-left: 100px;
 }
 header button{
+    margin-right: 90px;
     margin-top: 10px;
     border: none;
     color: white;
     background-color: transparent;
-    font-size: 1.5rem;
+    font-size: 1.2em;
 }
 header button:hover{
-    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    color: rgba(159, 159, 159, 0.854);
 }
 section{
-    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .principal{
     display: flex;
     align-items: center;
     gap: 20px;
-    max-width: 1200px;
+    max-width: 1400px;
     padding: 20px;
     margin: 0px auto;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 .principal img{
-    width: 500px;
-    height: 350px;
+    width: 600px;
+    height: 550px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .textos{
     font-weight: bold;
@@ -56,11 +61,25 @@ section{
     margin-bottom: 20px;
     margin-top: 5px;
 }
+.textos img:hover{
+    cursor: pointer;
+    border: 3px solid white;
+    transform: scale(1.1);
+    transition: 0.3S;
+}
+.textos h1,h3{
+    font-size: 2em;
+}
 .textos p{
-    line-height: 2.5rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
 }
 section h2{
+    margin: 20px;
+    margin-bottom: 10px;
     text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
 }
 .container{
     display: flex;
@@ -70,10 +89,10 @@ section h2{
     gap: 2em;
     flex-wrap: wrap;
     flex: 1;
-    max-width: 1200px;
+    max-width:  1400px;
 }
 button, .card1, .card2, .card3{
-    transition: all 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 .container h3,p{
     padding: 0px 20px;
@@ -86,25 +105,27 @@ button, .card1, .card2, .card3{
 .container p{
     font-size: 1.2em;
     line-height: 1.5em;
-    color: rgba(255, 255, 255, 0.699);
 }
 .container img{
-    height: 85px;
+    height: 90px;
     margin-bottom: 20px;
 }
 .card-1,.card-2,.card-3{
-    color: rgb(255, 255, 255);
+    margin-top: 10px;
     background-color: rgba(0, 0, 0, 0.932);
     width: 350px;
     min-height: 200px;
 }
-.card-1:hover, .card-2:hover, .card-3:hover{
-    transition: 1s;
+.card-1:hover, .card-2:hover, .card-3:hover,.card-4:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.3s;
     border: 2px solid white;
 }
 footer{
-    margin-top: 50px;
-    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 1.2rem;
 }
 .textos img{
     height: 50px;
@@ -119,9 +140,86 @@ footer{
     gap:32px;
     flex-wrap: wrap;
     flex: 1;
-    max-width: 1200px;
+    max-width: 1400px;
 }
-.meusprojetos img{
- width: 500px;
- height: 350px;
+.conhecimentos {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: flex-start;    
+  gap: 40px;   
+  padding: 96px 40px;
+  max-width: 1400px;
+  margin: 20px auto;
+  overflow-x: auto;
+}
+.cards{
+    margin-top: 10px;
+    background-color: rgba(9, 9, 9, 0.388);
+    width: 550px;
+    height: 400px;
+    padding: 30px;
+}
+.cards:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+    border: 2px solid white;
+}
+/* Estilo do título */
+.conhecimentos h2 {
+  margin: 0;
+  font-size: 2.5em;
+  text-align: left;
+  min-width: 150px; /* Garante espaço para o h2 */
+}
+.conhecimentos p{
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.7);
+}
+/* Container das logos */
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  flex: 1; /* Ocupa o espaço restante */
+  width: 350px;
+ min-height: 300px;
+}
+
+/* Estilo das imagens */
+.logo img {
+ width: 100px;
+  height: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: contain;
+}
+.animacao{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-out forwards;
+    max-width: 300px;
+    width: 100%;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width:768px){
+    .principal img, .meusprojetos img{
+        width: 100%;
+        height: auto;
+    }
+    .principal, .container{
+        flex-direction: column;
+        align-items: center;
+    }
 }
