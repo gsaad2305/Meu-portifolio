@@ -1,0 +1,368 @@
+:root {
+  --cor-fundo-principal: rgb(0, 0, 0);
+  --cor-fundo-secundario: #111010;
+  --cor-texto-principal: #ccc;
+  --cor-texto-hover: rgba(155, 147, 147, 0.854);
+  --cor-borda-hover: white;
+  --fonte-principal: Arial, Helvetica, sans-serif;
+  --transicao-suave: 0.5s ease-in-out;
+  --transicao-rapida: 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fonte-principal);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cor-fundo-principal);
+  color: var(--cor-texto-principal);
+}
+
+header {
+  padding: 20px;
+  background-color: var(--cor-fundo-secundario);
+  display: flex;
+  height: 90px;
+  width: 100%;
+  margin-bottom: 100px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+
+header img {
+  height: 60px;
+  margin-left: 15px;
+}
+
+header button {
+  margin-right: 20px;
+  margin-top: 10px;
+  border: none;
+  color: var(--cor-texto-principal);
+  background-color: transparent;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: var(--transicao-suave);
+}
+
+header button:hover {
+  color: var(--cor-texto-hover);
+}
+
+main {
+  margin-top: 100px;
+  padding-top: 50px;
+}
+
+section {
+  margin-bottom: 100px;
+}
+
+.principal {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto 20px;
+  flex-wrap: wrap;
+}
+
+.principal img {
+  width: 100%;
+  max-width: 600px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.textos {
+  font-weight: bold;
+  min-width:  350px;
+  flex: 1;
+}
+
+.textos img {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: var(--transicao-rapida);
+}
+
+.textos img:hover {
+  border-color: var(--cor-borda-hover);
+  transform: scale(1.1);
+}
+
+.textos h1 {
+  font-size: 2em;
+}
+
+.textos h3 {
+  font-size: 1.5rem;
+}
+
+.textos p {
+  margin: 15px 0;
+  line-height: 1.6;
+  font-size: 1.3rem;
+}
+
+section h2 {
+  margin: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  gap: 2em;
+  flex-wrap: wrap;
+  flex: 1;
+  max-width: 1400px;
+}
+
+.card-1, .card-2, .card-3 {
+  background-color: rgba(0, 0, 0, 0.932);
+  width: 350px;
+  min-height: 380px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: var(--transicao-suave);
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.card-1:hover, .card-2:hover, .card-3:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  border-color: var(--cor-borda-hover);
+}
+
+.container h3, .container p {
+  padding: 0 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.container h3 {
+  padding: 10px;
+  margin: 10px;
+  font-size: 2em;
+}
+
+.container p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+.container img {
+  margin: 10px;
+  margin-top: 20px;
+  height: 90px;
+  margin-bottom: 10px;
+}
+
+.servicos, .descricoes {
+  margin: 0;
+  font-size: 2.5em;
+  text-align: left;
+  min-width: 150px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.card-1.visivel, .card-2.visivel, .card-3.visivel, .servicos.visivel, .descricoes.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.meusprojetos {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  overflow-x: auto;
+  gap: 32px;
+  flex-wrap: wrap;
+  flex: 1;
+  max-width: 1400px;
+}
+
+.cards {
+  margin-top: 10px;
+  background-color: rgba(9, 9, 9, 0.388);
+  max-width: 650px;
+  height: auto;
+  padding: 30px;
+  align-self: center;
+  border: 2px solid transparent;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.cards:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  border-color: var(--cor-borda-hover);
+}
+
+.cards.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.conhecimentos p {
+  line-height: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.conhecimentos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 96px 40px;
+  max-width: 1400px;
+  margin: 20px auto;
+  overflow-x: auto;
+}
+
+.conhecimentos p {
+  line-height: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.logo {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  flex: 1;
+  width: min(600px, 90%);
+  min-height: 300px;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: contain;
+}
+
+.animacao {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s, transform 0.6s ease-out;
+  max-width: 300px;
+  width: 100%;
+}
+
+.animacao.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  margin-top: 5px;
+  padding: 5px;
+  display: flex;
+  font-size: 1.2rem;
+}
+
+footer img {
+  height: 40px;
+  width: auto;
+  margin-right: 20px;
+}
+
+@media(max-width: 768px) {
+  header {
+    height: 70px;
+    padding: 10px;
+  }
+
+  header img {
+    height: 50px;
+  }
+
+  .principal, .container {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .principal img {
+    height: auto;
+  }
+
+  .textos {
+    text-align: center;
+  }
+
+  .textos img {
+    margin: 10px;
+  }
+
+  .card-1, .card-2, .card-3, .cards {
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer img {
+    margin-right: 0;
+  }
+}
+
+@media(max-width: 468px) {
+  .principal, .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .card-1, .card-2, .card-3, .cards {
+    width: 95%;
+  }
+
+  header button {
+    font-size: 1em;
+  }
+}
