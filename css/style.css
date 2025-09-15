@@ -84,7 +84,7 @@ section {
   max-width: 600px;
   height: 500px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .textos {
@@ -113,13 +113,13 @@ section {
 }
 
 .textos h3 {
-  font-size: 1.5rem;
+  font-size: 1.4em;
 }
 
 .textos p {
   margin: 15px 0;
   line-height: 1.6;
-  font-size: 1.3rem;
+  font-size: 1.2em;
 }
 
 section h2 {
