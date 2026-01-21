@@ -1,5 +1,5 @@
 const conhecimentos = document.querySelectorAll(".cards, .descricoes");
-let animado = false; // controle para não animar mais de uma vez
+let animado = false; 
 
 window.addEventListener("scroll", () => {
   const logo = document.querySelector(".logo");
@@ -12,14 +12,13 @@ window.addEventListener("scroll", () => {
     conhecimentos.forEach((conhecimento, index) => {
       setTimeout(() => {
         conhecimento.classList.add('visivel');
-      }, index *  500 ); // 200ms entre cada card
+      }, index *  500 ); 
     });
   }
 });
 
 const servicos = document.querySelectorAll(".servicos,.card-1, .card-2, .card-3");
-let servico = false; // controle para não animar mais de uma vez
-
+let servico = false;
 window.addEventListener("scroll", () => {
   const servi = document.querySelector(".container");
   const servidTop = servi.getBoundingClientRect().top;
@@ -31,7 +30,7 @@ window.addEventListener("scroll", () => {
     servicos.forEach((servidor, index) => {
       setTimeout(() => {
         servidor.classList.add('visivel');
-      }, index *  500 ); // 200ms entre cada card
+      }, index *  500 ); 
     });
   }
 });
@@ -50,7 +49,7 @@ window.addEventListener("scroll", () => {
     projetos.forEach((projeto, index) => {
       setTimeout(() => {
         projeto.classList.add('visivel');
-      }, index *  700 ); // 200ms entre cada card
+      }, index *  700 );
     });
   }
 });

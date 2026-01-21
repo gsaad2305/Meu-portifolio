@@ -146,6 +146,7 @@ section h2 {
   width: 350px;
   min-height: 380px;
   border-radius: 5px;
+  
   border: 2px solid transparent;
   transition: var(--transicao-suave);
   opacity: 0;
@@ -365,4 +366,5 @@ footer img {
   header button {
     font-size: 1em;
   }
+  
 }

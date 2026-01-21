@@ -6,9 +6,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
           entry.target.classList.add('active');
         }
       });
-    }, { threshold: 0.5}); // ativa quando 50% da imagem estiver visível
-
-    // observer.observe(target);
+    }, { threshold: 0.5}); 
 })
 
 
